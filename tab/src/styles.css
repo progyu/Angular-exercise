@@ -1,0 +1,17 @@
+@import "https://fonts.googleapis.com/css?family=Open+Sans:400,600,700";
+@import "https://use.fontawesome.com/releases/v5.3.1/css/all.css";
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-image: linear-gradient(20deg, #08aeea 0%, #2af598 100%);
+  font-family: 'Open Sans', Sans-serif;
+}/* You can add global styles to this file, and also import other style files */
