@@ -20,9 +20,9 @@ export class TodosComponent {
     { id: 3, content: 'JS', completed: false }
   ];
 
-  addTodo(content: HTMLInputElement) {
-    this.todos = [...this.todos, { id: this.getId(), content: content.value, completed: false }];
-    content.value = '';
+  addTodo(input: HTMLInputElement) {
+    this.todos = [...this.todos, { id: this.getId(), content: input.value, completed: false }];
+    input.value = '';
   }
 
   removeTodo(todoid: number) {

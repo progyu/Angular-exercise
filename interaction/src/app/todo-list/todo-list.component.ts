@@ -23,14 +23,14 @@ import { Todo } from '../todo.interface';
 })
 export class TodoListComponent {
   @Input() todos: Todo[];
-  @Output() remove = new EventEmitter();
   @Output() check = new EventEmitter();
-
-  removeTodo(id: number) {
-    this.remove.emit(id);
-  }
+  @Output() remove = new EventEmitter();
 
   checkTodo(id: number) {
     this.check.emit(id);
+  }
+
+  removeTodo(id: number) {
+    this.remove.emit(id);
   }
 }
