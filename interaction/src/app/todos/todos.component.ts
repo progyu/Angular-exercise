@@ -5,7 +5,8 @@ import { Todo } from '../todo.interface';
   selector: 'app-todos',
   template: `
     <app-todo-input (add)="addTodo($event)"></app-todo-input>
-    <app-todo-list [todos]="todos"
+    <app-todo-list 
+      [todos]="todos"
       (remove)="removeTodo($event)"
       (check)="checkTodo($event)"
     ></app-todo-list>
@@ -20,9 +21,8 @@ export class TodosComponent {
     { id: 3, content: 'JS', completed: false }
   ];
 
-  addTodo(input: HTMLInputElement) {
-    this.todos = [...this.todos, { id: this.getId(), content: input.value, completed: false }];
-    input.value = '';
+  addTodo(content: string) {
+    this.todos = [...this.todos, { id: this.getId(), content, completed: false }];
   }
 
   removeTodo(todoid: number) {

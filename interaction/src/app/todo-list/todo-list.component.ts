@@ -6,10 +6,11 @@ import { Todo } from '../todo.interface';
   template: `
     <ul>
       <li *ngFor="let todo of todos">
-        <input type="checkbox" 
-        [checked]="todo.completed"
-        (change)="checkTodo(todo.id)"
-        >
+        <input 
+          type="checkbox" 
+          [checked]="todo.completed"
+          (change)="checkTodo(todo.id)"
+        />
         <span [class.cancel]="todo.completed">{{todo.content}}</span>
         <button (click)="removeTodo(todo.id)">X</button>
       </li>
